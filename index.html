@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Datos</title>
+</head>
+
+<body>
+    <h1>Nuevos Tipos de Datos</h1>
+    <p>lorem</p>
+    <p>lorem</p>
+    <p>lorem</p>
+    <script>
+        // const ws = WeakSet([1,2,3,3,4,5,true,false,false,{},{},"hola","Hola"]);
+        /* const ws = new WeakSet();
+         let valor1 = {"valor1": 1};
+         let valor2 = {"valor2": 2};
+         let valor3 = {"valor3": 3};
+ 
+         ws.add(valor1);
+         ws.add(valor2);
+         console.log(ws);
+ 
+         console.log(ws.has(valor1));
+         console.log(ws.has(valor3));
+ 
+         ws.delete(valor2);
+         console.log(ws);
+ 
+         ws.add(valor2);
+         ws.add(valor3);
+         console.log(ws);
+ 
+         setInterval(()=> console.log(ws), 1000);
+ 
+ 
+         setTimeout(()=> {
+             valor1 = null;
+             valor2 = null;
+             valor3 = null;
+         },5000)
+         */
+        /*
+         const wm = new WeakMap();
+         let llave1 = {};
+         let llave2 = {};
+         let llave3 = {};
+ 
+         wm.set(llave1, 1);
+         wm.set(llave2, 2);
+         console.log(wm);
+ 
+         console.log(wm.has(llave1));
+         console.log(wm.has(llave3));
+ 
+         console.log(wm.get(llave1));
+         console.log(wm.get(llave2));
+         console.log(wm.get(llave3));
+ 
+         wm.delete(llave2);
+         console.log(wm);
+ 
+         wm.set(llave2);
+         wm.set(llave3, 3);
+         console.log(wm);
+ 
+         setInterval(()=> 
+             console.log(wm), 1000);
+ 
+          
+         setTimeout(()=> {
+             llave1 = null;
+             llave2 = null;
+             llave3 = null;
+         },5000);
+         */
+        /*
+     const persona = {
+         nombre: " ",
+         apellido: " ",
+         edad: 0,
+     }
+ 
+     const usuario = {
+         nombre: ""
+     }
+ 
+     
+ 
+     const manejador = {
+       set(obj,prop,valor) {
+         if(Object.keys(obj).indexOf(prop)=== -1){
+           return console.error(`La propiedad $"{prop}" no existe en el objeto persona.`);
+         }
+         if ((prop === "nombre" || prop === "apelido")&&
+         !(/^[a-za-zÑñ]+$/g.test(valor)))
+          {
+           return console.error  
+         }
+         if ((prop === 'edad' && valor < 18) || (prop === 'edad' && valor > 40)) {
+             return console.error('Solo se pertimen mayores de edad y menores de 40 años');
+         }
+ 
+ 
+         obj[prop]= valor;
+       }
+     } 
+ 
+     const jon = new Proxy(persona,manejador);
+     const usuarioObj = new Proxy(usuario, manejador)
+      jon.nombre = "Jon"
+      jon.apellido = "Mircha"
+      jon.edad = 15;
+      jon.twitter = "@jonmircha";
+      
+      console.log(jon);
+ 
+      console.log(persona);
+      
+     const usuario1 = {
+         nombre: " ",
+         edad: 0,
+         telefono: 0, 
+         direccion: " ",
+     }
+     
+     const manejador = {
+         set (obj,prop,valor) {
+             if(Object.keys(obj).indexOf(prop)=== -1){
+                 return console.error(`La propiedad $"{prop}" no existe en el objeto persona.`);
+             }
+             if (prop === "nombre" && !(/^[a-za-zÑñ]+$/g.test(valor))) {
+                 return console.error('EL NOMBRE NO DEBE DE LLEVAR NUMEROS');
+             }
+             if ((prop === "nombre" &&  valor.length > 20) || (prop === "nombre" && valor.length < 5)) {
+                 return console.error(`La propiedad ${prop}no puede ser mas de 20 caracteres y menos de 5 caracteres`)
+             }
+ 
+             if(prop === "edad" && (/^[a-za-zÑñ]+$/g.test(valor))||(prop === "edad" && valor < 18) ) {
+                 console.error(`debe ser mayor de ${prop} y la propiedad ${prop} solo acepta numeros `);
+             }
+             
+             if(prop === "telefono" && (/^[a-za-zÑñ]+$/g.test(valor))||(prop === "telefono" && valor > 10) ) {
+                 console.error(` ${prop} debe ser solo numeros y de 10 caracteres`);
+             }
+             if (prop === "direccion" && valor.length > 50) {
+                 console.error(`La propiedad ${prop} debe ser maximo de 50 caracteres `);
+             }
+ 
+             obj[prop]= valor;
+         }
+ 
+     }
+     const jon = new Proxy(usuario1,manejador);
+      jon.nombre = "Far233123"
+      jon.edad = 17,
+      jon.telefono = 5555555555555555
+      jon.direccion = "milpa Alta wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwqqqqqqq "
+     
+      console.log(jon);
+ 
+      console.log(usuario1);
+      */
+
+        /*
+             let aleatorio = Math.round(Math.random()* 100 + 5);
+              const objUsuarios = {
+                propiedad: "valor",
+                [`id_${aleatorio}`]: "Valor Aleatorio"
+             }
+             console.log(objUsuarios);
+        
+            const usuarios = ["Jon","Irma", "Miguel", "Kala", "Kena"];
+             usuarios.forEach((usuario,index)=> objUsuarios[`id_${index}`]= usuario);
+             
+             console.log(objUsuarios);
+            
+        
+             const objUsuarios1 = {};
+             console.log(objUsuarios1);
+            
+             const usuario = ["Elisa","Melisa","Benito","Juanita"]
+              usuario.forEach((usuario,index)=> objUsuarios1[`id_${index}`]=usuario);
+        
+              console.log(objUsuarios1)
+        
+              objUsuarios1[`id_`[0]]= "Miguel"; 
+        
+              console.log(objUsuarios1)
+        
+        */
+        /*
+         function clasesthis() {
+            usuariosObj[sumar]= function (num1,num2) {
+                return num1 + num2;
+            }
+        
+        } 
+            const usuariosObj = {} 
+            console.log(usuariosObj);
+        
+             const numeros = [1,2,3,4,5,5,6,7,8,10]
+              numeros.forEach((numeros,index)=> usuariosObj);
+        
+              
+              console.log(numeros)
+        
+              numeros[8]=9;
+              console.log(numeros);
+              numeros[10]= "Miguel";
+              console.log(numeros);
+            */
+
+        this.lugar = "Contexto Global"
+
+        function saludar(saludo,aQuien) {
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        }
+        saludar("Hola", "Kena");
+
+        const obj = {
+            lugar: "Contexto Objeto"
+        }
+
+        saludar.call(obj,"Hola","Jon");
+        saludar.call(null,"Hola","Jon");
+        saludar.call(this,"Hola","Jon");
+        saludar.apply(obj,["Adios","Mircha"]);
+        saludar.apply(null,["Adios","Mircha"]);
+        saludar.apply(this,["Adios","Mircha"]);
+
+
+
+
+
+
+        /*
+        console.log(this);
+        console.log(window);
+        console.log(this === window);
+    
+        this.nombre = "Contexto Global";
+        console.log(this.nombre);
+    
+        function imprimir() {
+            console.log(this.nombre);
+        }
+    
+        imprimir();
+    
+        const obj = {
+            nombre: "Contexto Objeto",
+            imprimir: function () {
+                console.log(this.nombre);
+            }
+        }
+        obj.imprimir();
+    
+        const obj2 = {
+            nombre: "Contexto Objeto 2",
+            imprimir
+    
+        } 
+    
+       obj2.imprimir();
+    
+       const obj3 = {
+        nombre:"Contexto Objeto 3",
+        imprimir:() => {
+            console.log(this.nombre);
+        }
+       }
+    
+       obj3.imprimir();
+       */
+    
+       /*
+      const json = {
+        cadena: "Jon",
+        numero: 35,
+        boleano: true,
+        arreglo:["correr","Programar","cosinar"],
+        objeto:{
+            twiter: "@jonmircha",
+            email:"jonmircha@gmail.com"
+        },
+        nulo: null
+      }
+      console.log(json);
+      console.log(JSON);
+      */
+    /* console.log(window);
+     console.log(document);
+
+    let texto = ("hola soy victor y estoy estudiando javascript");
+
+     const hablar = (texto)=> speechSynthesis. 
+     speak(new SpeechSynthesisUtterance(texto));
+
+    hablar(texto);
+
+
+    const saludar = (texto1) => SpeechRecognitionResultList    speak(new screenLeft)
+*/
+
+
+    </script>
+
+</body>
+
+</html>
