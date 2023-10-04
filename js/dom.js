@@ -336,15 +336,26 @@ function holaMundo() {
     alert("Hola Mundo");
     console.log(Event);
 }
+
+function saludar(nombre = "Desconocido") {
+    alert(`Hola ${nombre}`);
+}
 const $EventoSemantico = document.getElementById("evento-semantico");
-const $EventoMultiple = document.getElementById("evento-multiple");
+$EventoMultiple = document.getElementById("evento-multiple");
 
+$EventoSemantico.onclick = holaMundo;
 $EventoSemantico.onclick = function (e) {
-    alert("Hola Mundo manejador de Evento Semantico");
+    alert("Hola Mundo Manejador de evento Semanico");
     console.log(e);
-};
-$EventoMultiple.onclick = function (e) {
-    alert("Hola Mundo manejador de Evento Multiple");
-    console.log(e);
-};
+}
 
+
+$EventoMultiple.addEventListener("click",holaMundo);
+$EventoMultiple.addEventListener("clik",(e)=> {
+    alert("Hola Mundo Manejador de Evento Multiple");
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(Event);
+});
+$EventoMultiple.addEventListener("click",saludar);
