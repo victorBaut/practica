@@ -359,3 +359,17 @@ $EventoMultiple.addEventListener("clik",(e)=> {
     console.log(Event);
 });
 $EventoMultiple.addEventListener("click",saludar);
+
+
+$EventoMultiple.addEventListener("click",()=>{
+    saludar();
+    saludar("Esme");
+    saludar("Carla");
+    saludar("Ariana");
+    saludar("Victor");
+    
+});
+
+//flujo de evento (burbuja y captura);
+
+
