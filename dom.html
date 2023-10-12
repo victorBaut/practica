@@ -8,31 +8,38 @@
     <title>Web APIs</title>
     <link rel="stylesheet" href="css/estilos.css">
     <style>
-        :root{
-         --yellow-color:#F7DF1E;
-         --dark-color:#222;
+        :root {
+            --yellow-color: #F7DF1E;
+            --dark-color: #222;
         }
-        .cards{
+
+        .cards {
             border: thin solid var(--dark-color);
-            padding:1rem;
+            padding: 1rem;
         }
-        .card{
+
+        .card {
             display: inline-block;
             background-color: var(--dark-color);
             color: var(--yellow-color);
         }
+
         .card figcaption {
             padding: 1rem;
-        } 
+        }
+
         .rotate-45 {
             transform: rotate(45deg);
         }
+
         .rotate-135 {
             transform: rotate(135deg);
         }
+
         .opacity-80 {
             opacity: .8;
         }
+
         .sepia {
             filter: sepia(1);
         }
@@ -42,6 +49,20 @@
             max-width: 200px;
 
         }
+        .eventos-flujo div {
+          padding: 4rem;
+          font-size: 2rem;
+          text-align: center;
+        }
+.uno {
+  background-color: #F7DF1E;
+}
+.dos {
+  background-color: antiquewhite;
+}
+.tres {
+  background-color: aliceblue;
+}
     </style>
 </head>
 
@@ -84,7 +105,7 @@
         </ul>
     </nav>
     <input type="text" name="nombre" placeholder="Nombre">
-    <a class="link-dom" href="dom.html"data-id="1" data-description="Document Object Model" >DOM</a>
+    <a class="link-dom" href="dom.html" data-id="1" data-description="Document Object Model">DOM</a>
     <section class="cards">
         <figure class="card">
             <img src="https://img.freepik.com/foto-gratis/hombre-tiro-medio-gafas-vr_23-2149126949.jpg?t=st=1695334298~exp=1695334898~hmac=c28702bc5d0a2db7d85c7d2feb444f1ef5ccbe4f99ed7753cf25f47a432c0f1b"
@@ -93,11 +114,11 @@
         </figure>
         <figure class="card">
             <img src="https://www.nationalgeographic.com.es/medio/2022/12/12/aguila-2_d7d2206b_221212153725_310x310.jpg"
-                alt="Animals" >
+                alt="Animals">
             <figcaption>Animals</figcaption>
         </figure>
-        <figure class="card">  
-         <img src="https://c8.alamy.com/compes/e700yg/multitud-de-espectadores-viendo-los-eventos-deportivos-al-aire-libre-e700yg.jpg"
+        <figure class="card">
+            <img src="https://c8.alamy.com/compes/e700yg/multitud-de-espectadores-viendo-los-eventos-deportivos-al-aire-libre-e700yg.jpg"
                 alt="Gente">
             <figcaption>Gente</figcaption>
         </figure>
@@ -111,21 +132,44 @@
             <figcaption>Nature</figcaption>
         </figure>
     </section>
-<template id="template-cards">
-    <figure class="card">
-        <img>
-        <figcaption>
+    <template id="template-cards">
+        <figure class="card">
+            <img>
+            <figcaption>
 
-        </figcaption>
-    </figure>
-   </template>
-   <h3>Eventos en Javascript</h3>
-   <h4>Manejadores de Eventos</h4>
-   <button onclick ="holaMundo()">Evento con atributo HTML</button>
- <br><br>
-   <button id ="evento-semantico">Evento con manejador semantico</button>
-   <br><br>
-   <button id="evento-multiple">Evento con manejador multiple</button>
+            </figcaption>
+        </figure>
+    </template>
+    <h3>Eventos en Javascript</h3>
+    <h4>Manejadores de Eventos</h4>
+    <button onclick="holaMundo()">Evento con atributo HTML</button>
+    <br><br>
+    <button id="evento-semantico">Evento con manejador semantico</button>
+    <br><br>
+    <button id="evento-multiple">Evento con manejador multiple</button>
+    <br>
+    <h4>Flujo de Eventos</h4>
+    <section class="eventos-flujo">
+        <div class="uno">
+            1
+            <div class="dos">
+                2
+                <div class="tres">
+                    3
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <button id="abrir-ventana">Abrir ventana</button>
+    <br>
+    <br>
+    <button id="cerrar-ventana">Cerrar Ventana</button>
+    <br>
+    <br>
+    <button id="imprimir">Imprimir ventana</button>
+
     <script src="js/dom.js"></script>
 
 </body>

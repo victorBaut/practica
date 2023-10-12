@@ -333,43 +333,95 @@ $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any");
 
 
 function holaMundo() {
-    alert("Hola Mundo");
-    console.log(Event);
+  alert("Hola Mundo");
+  console.log(Event);
 }
 
 function saludar(nombre = "Desconocido") {
-    alert(`Hola ${nombre}`);
+  alert(`Hola ${nombre}`);
 }
 const $EventoSemantico = document.getElementById("evento-semantico");
 $EventoMultiple = document.getElementById("evento-multiple");
 
 $EventoSemantico.onclick = holaMundo;
 $EventoSemantico.onclick = function (e) {
-    alert("Hola Mundo Manejador de evento Semanico");
-    console.log(e);
+  alert("Hola Mundo Manejador de evento Semanico");
+  console.log(e);
 }
 
 
-$EventoMultiple.addEventListener("click",holaMundo);
-$EventoMultiple.addEventListener("clik",(e)=> {
-    alert("Hola Mundo Manejador de Evento Multiple");
-    console.log(e);
-    console.log(e.type);
-    console.log(e.target);
-    console.log(Event);
+$EventoMultiple.addEventListener("click", holaMundo);
+$EventoMultiple.addEventListener("clik", (e) => {
+  alert("Hola Mundo Manejador de Evento Multiple");
+  console.log(e);
+  console.log(e.type);
+  console.log(e.target);
+  console.log(Event);
 });
-$EventoMultiple.addEventListener("click",saludar);
+$EventoMultiple.addEventListener("click", saludar);
 
 
-$EventoMultiple.addEventListener("click",()=>{
-    saludar();
-    saludar("Esme");
-    saludar("Carla");
-    saludar("Ariana");
-    saludar("Victor");
-    
+$EventoMultiple.addEventListener("click", () => {
+  saludar();
+  saludar("Esme");
+  saludar("Carla");
+  saludar("Ariana");
+  saludar("Victor");
+
 });
 
 //flujo de evento (burbuja y captura);
+/*
+const $divEventos = document.querySelectorAll(".eventos-flujo div");
+  $div = document.querySelector("flujo-eventos")
+console.log($divEventos);
 
+function flujoEvento(e) {
+  console.log(`Hola te saluda ${this.className},el click lo origina ${e.target.className}`);
+  console.log($divEventos);
+}
+/*
+$divEventos.forEach(div => {
+div.addEventListener("click",flujoEvento,false);
+});
+*/
+/*
+$divEventos.forEach(div => {
+  div.addEventListener("click",flujoEvento,true);
+  });
+  div.addEventListener("click", flujoEvento,{
+  capture: false,
+  once: true,
+});
+*/
+//BOM: propiedades y eventos
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+console.log(window.outerHeight);
+console.log(window.outerWidth);
 
+//para ver en que coordemnada empieza a dibujarse la ventana de tu navegador
+// para ello se utiliza el screenX
+// y screenY
+/*
+window.addEventListener("load",(e)=> {
+  console.clear();
+  console.log("****Evento load****");
+  console.log(window.creenX);
+  console.log(window.screenY);
+  console.log(e);
+});
+window.addEventListener("scroll",(e)=>{
+  console.clear();
+  console.log("****Evento Scroll****");
+  console.log(window.scrollX);
+  console.log(window.scrollY);
+  console.log(e);
+});
+document.addEventListener("DOMContentLoaded",(e)=>{
+  console.log("****Evento DOMContentloaded****");
+  console.log(window.screenX);
+  console.log(window.screenY);
+  console.log(e);
+});
+*/
