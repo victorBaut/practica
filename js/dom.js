@@ -394,12 +394,13 @@ $divEventos.forEach(div => {
   once: true,
 });
 */
+/*
 //BOM: propiedades y eventos
 console.log(window.innerWidth);
 console.log(window.innerHeight);
 console.log(window.outerHeight);
 console.log(window.outerWidth);
-
+*/
 //para ver en que coordemnada empieza a dibujarse la ventana de tu navegador
 // para ello se utiliza el screenX
 // y screenY
@@ -425,4 +426,58 @@ document.addEventListener("DOMContentLoaded",(e)=>{
   console.log(e);
 });
 */
+
+/*
+const $btnAbrir = document.getElementById("abrir-ventana");
+const $btnCerrar = document.getElementById("cerrar-ventana");
+const $btnImprimir = document.getElementById("imprimir-ventana");
+
+let ventana;
+
+$btnAbrir.addEventListener("click", e => {
+  ventana = window.open("https://github.com/victorBaut/practica");
+});
+
+$btnCerrar.addEventListener("click",e =>{
+  console.log('cerrars');
+  ventana.close();
+});
+
+$btnImprimir.addEventListener("click",e =>{
+  window.print();
+});
+*/
+// BOM objetos URL, Historial y Navegador.
+/*
+console.log("****Objeto URL (location)****");
+console.log(location);
+console.log(location.protocol);
+console.log(location.origin);
+console.log(location.host);
+console.log(location.hostname);
+console.log(location.port);
+console.log(location.href);
+console.log(location.hash);
+console.log(location.pathname);
+//location.reload();
+*/
+
+/*
+console.log("****Objeto Historial(History)****")
+console.log(history);
+console.log(history.length);
+console.log(history.go);
+*/
+
+console.log("****Objeto navegador");
+console.log(navigator);
+console.log(navigator.connection);
+console.log(navigator.geolocation);
+console.log(navigator.mediaDevices);
+console.log(navigator.mimeTypes);
+console.log(navigator.onLine);
+console.log(navigator.serviceWorker);
+console.log(navigator.storage);
+console.log(navigator.usb);
+console.log(navigator.userAgent);
 
