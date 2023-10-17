@@ -75,7 +75,7 @@ for (let index = 0; index < 10; index++) {
     ulElement[0].appendChild(liItem);
 }
 */
-/*
+
 const $linkDOM = document.querySelector(".link-dom");
 console.log($linkDOM.style);
 console.log($linkDOM.style.backgroundColor);
@@ -101,7 +101,7 @@ let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
  varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
 
  $body.style.setProperty("background-color", varDarkColor);
- */
+ 
 /*
 const $card = document.querySelector(".card");
  console.log($card);
@@ -468,7 +468,7 @@ console.log(history);
 console.log(history.length);
 console.log(history.go);
 */
-
+/*
 console.log("****Objeto navegador");
 console.log(navigator);
 console.log(navigator.connection);
@@ -480,4 +480,5 @@ console.log(navigator.serviceWorker);
 console.log(navigator.storage);
 console.log(navigator.usb);
 console.log(navigator.userAgent);
+*/
 
