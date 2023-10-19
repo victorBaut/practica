@@ -3,7 +3,7 @@ export default function hamburgerMenu(panelBtn,panel) {
 
 d.addEventListener("click", e => {
 if(e,target.matches(panelBtn)) {
-  d.querySelector(panel).classList.toggle("is-active");
+  d.querySelector(panel).classList.toggle("is-active")
 }
 });
 }

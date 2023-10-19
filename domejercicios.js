@@ -1,4 +1,4 @@
-import hamburgerMenu from "./menu_hanburguesa";
+import hamburgerMenu from "./menu_hamburguesa";
 const d = document;
 
 d.addEventListener("DOMContentLoaded", e =>{

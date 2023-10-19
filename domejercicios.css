@@ -66,15 +66,15 @@ img {
 .panel {
   position: fixed;
   z-index: 998;
-  width: 100%;
-  background-color: var(--second-modal-color);
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: transform 0.3s ease;
+  width: 100%;
+  background-color: var(--second-modal-color);
+  transition:transform 0.3s ease;
   /* de Arriba */
-  transform: translate(0,-100);
+  transform: translate(0,-100%);
 }
 .panelis-active {
   transform: translate(0,0);
