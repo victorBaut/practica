@@ -72,9 +72,15 @@ img {
   right: 0;
   width: 100%;
   background-color: var(--second-modal-color);
-  transition:transform 0.3s ease;
+  transition:transform 0.3s ease, opacity 0.4s ease;
   /* de Arriba */
-  transform: translate(0,-100%);
+ /* transform: translate(0,-100%);
+  /* de abajo */
+ /* transform: translate(0,100%);
+  /* dereha */
+  transform: translate(100%,0);
+  /* izquierda */
+ transform: translate(-100%,0);
 }
 .panelis-active {
   transform: translate(0,0);
