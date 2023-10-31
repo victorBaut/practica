@@ -1,8 +1,9 @@
 import hamburgerMenu from "./menu_hamburguesa.js";
 import {digitalClok, alarm} from "./alarmadigital.js";
-import { shortcus } from "./teclado.js";
+import {moveball, shortcus } from "./teclado.js";
 
 const d = document;
+
 
 d.addEventListener("DOMContentLoaded", e =>{
   hamburgerMenu(".panel-btn",".panel",".menu a");  
@@ -21,4 +22,5 @@ d.addEventListener("DOMContentLoaded", e =>{
 })*/
 d.addEventListener("keydown", (e)=>{
   shortcus(e);
+  moveball(e,".ball",".stage");
 })
