@@ -21,23 +21,34 @@ export function moveball(e, ball, stage) {
 
   switch (e.keyCode) {
     case 37:
-      e.preventDefault();
-      x--;
+      if (limitsBall.left > limitsStage.left){ 
+        e.preventDefault();
+         x--;
+        }
      // move("left")
       break;
+
       case 38:
-        e.preventDefault();
-       y--;
+        if (limitsBall.top > limitsStage.top){ 
+          e.preventDefault();
+          y--;
+        }
         // move("up")
       break;
+
       case 39:
-        e.preventDefault();
-        x++;
-         //move("rigth")
+         if (limitsBall.right < limitsStage.right){
+          e.preventDefault();
+          x++;
+        }
+         //move("right")
       break;
+
       case 40:
-        e.preventDefault();
+        if (limitsBall.bottom < limitsStage.bottom){
+          e.preventDefault()
        y++;
+      }
        // move("Down")
       break;
     default:
