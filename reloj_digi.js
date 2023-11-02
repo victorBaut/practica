@@ -11,7 +11,7 @@ const detenerAlarma = doc.getElementById("detener-alarma")
 iniciarBtn.addEventListener("click", (e) => {
   intervalReloj = setInterval(() => {
     const myDate = new Date();
-    const hours = myDate.getHours();
+    const hours = myDate.getHours(); 
     const minutes = myDate.getMinutes();
     const seconds = myDate.getSeconds();
     const horaActual = hours + ":" + minutes + ":" + seconds;

@@ -1,6 +1,8 @@
 import hamburgerMenu from "./menu_hamburguesa.js";
 import {digitalClok, alarm} from "./alarmadigital.js";
 import {moveball, shortcus } from "./teclado.js";
+import { cuentaRegresiva } from "./cuenta_regresiva.js";
+
 
 const d = document;
 
