@@ -1,18 +1,14 @@
-const d = document
+const d = document;
 
-  let conteoReg;
-
-  conteoReg = setInterval(() => {
-
-    const myDate = new Date();
-    const day = myDate.getDay();
-    const hours = myDate.getHours();
-    const minutes = myDate.getMinutes();
-    const seconds = myDate.getSeconds();
-    const horaActual = day + ":" + hours + ":" + minutes + ":" + seconds;
-    console.log(horaActual);
-    horaActualText.innerText = horaActual;
-  }, interval);
+export default function countdown(id,limitDate,finalMessage) {
+  const $countdown = d.getElementById(id);
+  const countdownDate = new Date(limitDate).getTime();
 
 
+  let countdowTempo=setInterval(() => {
+    let now = new Date().getTime();
+    let limiTime = countdownDate - now;
+   // console.log(countdownDate, now, limiTime);
+  }, 1000);
+}
 
