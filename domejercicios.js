@@ -11,8 +11,12 @@ d.addEventListener("DOMContentLoaded", e =>{
   hamburgerMenu(".panel-btn",".panel",".menu a");  
   digitalClok("#reloj","#activar-reloj","#desactivar-reloj")
   alarm("asets/alarm-clock.mp3","#activar-alarma","#desactivar-alarma")
-  countdown("coundow", "dec 31, 2023, 12:00:00", "Feliz Año nuevo")
+  countdown("coundown",
+   "dec 31, 2023, 24:00:00",
+    "Feliz Año nuevo 2024 FELICIDADES 🥳"); 
 });
+
+
 
 //el teclado tiene tres eventos Keydown, keypress, y keydoof
 
